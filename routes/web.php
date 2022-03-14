@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TransportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('master');
 });
+Route::get('transport/view',[TransportController::class, 'transport'])->name('transport');
+Route::get('transport/craete',[TransportController::class, 'craete'])->name('craete');
+Route::post('transport/store',[TransportController::class, 'store'])->name('transport.store');

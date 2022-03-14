@@ -10,7 +10,9 @@ class TransportController extends Controller
 {
     public function transport()
     {
-        return view('pages.transport');
+        
+        $transport = Transport::all();
+        return view('pages.transport', compact('transport'));
     }
     public function craete()
     {
@@ -20,6 +22,8 @@ class TransportController extends Controller
     {
         Transport::create([
             'transport_name'=>$request-> transport_name,
+            'transport_price'=>$request-> transport_price,
+            'transport_type'=>$request-> transport_type,
         ]);
         return redirect()->back();
     }

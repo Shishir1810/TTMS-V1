@@ -16,6 +16,8 @@ class CreateTransportsTable extends Migration
         Schema::create('transports', function (Blueprint $table) {
             $table->id();
             $table ->string('transport_name');
+            $table ->double('transport_price');
+            $table ->string('transport_type');
             $table->timestamps();
         });
     }

@@ -1,7 +1,7 @@
 @extends('master')
 @section('content')
 
-<a href="{{route('craete')}}"  class="btn btn-primary my-5">create transport</a>
+<a href="{{route('hotel.craete')}}"  class="btn btn-primary my-5">create hotel</a>
 <table class="table">
   <thead>
     <tr>
@@ -13,12 +13,12 @@
   </thead>
   <tbody>
 
-    @foreach($transport as $data)
+    @foreach($hotel as $data)
       
       <th scope="row"> {{$data->id}} </th>
-      <td>{{$data->transport_name}}</td>
-      <td>{{$data->transport_price}}</td>
-      <td>{{$data->transport_type}}</td>
+      <td>{{$data->hotel_name}}</td>
+      <td>{{$data->hotel_price}}</td>
+      <td>{{$data->hotel_type}}</td>
     </tr>
     @endforeach
     

@@ -3,7 +3,7 @@
 
 <form action="{{route('hotel.store')}}" method="post">
     @csrf
-  <div class="form-group">
+  <div class="form-group col-md-6">
     <label ><h4>Hotel</h4></label>
     <input type="text" class="form-control"  placeholder="Enter name" name="hotel_name">
     <input type="text" class="form-control"  placeholder="Enter price" name="hotel_price">

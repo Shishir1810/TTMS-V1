@@ -34,10 +34,10 @@
                         <a class="collapse-item" href="register.html">Register</a>
                         <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
                         <h5 class="collapse-header">Other Pages:</h5>
-                        <a class="collapse-item" href="login.html">Place</a>
+                        <a class="collapse-item" href="{{route('place')}}">Place</a>
                         <a class="collapse-item" href=" {{route('transport')}} ">Transports</a>
                         <a class="collapse-item" href="{{route('hotel')}}">Hotel</a>
-                        <a class="collapse-item" href="login.html">Tour Guide</a>
+                        <a class="collapse-item" href="{{route('tourguide')}}">Tour Guide</a>
                     </div>
                 </div>
             </li>

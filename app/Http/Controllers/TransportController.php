@@ -14,9 +14,9 @@ class TransportController extends Controller
         $transport = Transport::all();
         return view('pages.transport', compact('transport'));
     }
-    public function craete()
+    public function create()
     {
-        return view('pages.transporcreate');
+        return view('pages.transportcreate');
     }
     public function store(Request $request)
     {

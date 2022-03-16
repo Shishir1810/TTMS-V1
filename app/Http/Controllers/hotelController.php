@@ -13,7 +13,7 @@ class hotelcontroller extends Controller
         $hotel=hotel::all();
         return view('pages.hotel', compact('hotel'));
     }
-    public function craete()
+    public function create()
     {
         return view('pages.hotelcreate');
     }

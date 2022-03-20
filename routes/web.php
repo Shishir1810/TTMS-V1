@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TransportController;
 use App\Http\Controllers\hotelController;
 use App\Http\Controllers\placecontroller;
 use App\Http\Controllers\tourguidecontroller;
+use App\Http\Controllers\TransportController;
+use App\Http\Controllers\Packagelistcontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +19,13 @@ use App\Http\Controllers\tourguidecontroller;
 
 Route::get('/', function () {
     return view('master');
-});
+})->name('master');
+// packagelist route
+
+route::get('packagelist/view',[Packagelistcontroller::class, 'packagelist'])->name('packagelist');
+route::get('packagelist/create',[packagelistcontroller::class, 'create'])->name('packagelist.create');
+route::post('packagelist/store',[packagelistcontroller::class, 'store'])->name('packagelist.store');
+
 // tourguidecontroller route
 
 route::get('tourguide/view',[tourguidecontroller::class, 'tourguide'])->name('tourguide');

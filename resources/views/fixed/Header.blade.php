@@ -1,6 +1,14 @@
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Package Details
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+  <a class="dropdown-item" href="{{route('packagelist')}}">Packagelist</a>
+    <button class="dropdown-item" type="button">User create package</button>
+    <button class="dropdown-item" type="button">Review</button>
+  </div>
+</div>
 
                     <!-- Topbar Search -->
                     <form
@@ -25,24 +33,22 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
-                        </li>  
+                            
+  
 
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                           
-                            <div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Package Details
+</ul>
+
+
+<!-- Example single danger button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  ABOUT
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Profile</a>
+    <a class="dropdown-item" href="#">Logout</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Details</a>
   </div>
 </div>
-</li>
-                            
-
-                    </ul>
-
-                </nav>
+</nav>

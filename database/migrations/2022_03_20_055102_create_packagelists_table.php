@@ -22,7 +22,7 @@ class CreatePackagelistsTable extends Migration
             $table->string('packagelist_type');
             $table->double('packagelist_cost');
             $table->double('packagelist_person');
-            $table->double('packagelist_date');
+            $table->date('packagelist_date');
             
             $table->timestamps();
         });

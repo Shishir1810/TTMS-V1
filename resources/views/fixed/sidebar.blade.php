@@ -11,39 +11,24 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="{{route('master')}}">
-                <i class="fas fa-address-book"></i>
-                    <span>Booking Details</span></a>
-            </li>
+            <a class="text-white" href="{{route('admin')}}"><i class='fa fa-folder-open'></i>Admin</a>
+            <a class="text-white" href="{{route('tourist')}}"><i class='fa fa-folder-open'></i>Tourist</a>
+            <a class="text-white" href="{{route('tourguide')}}"><i class='fas fa-user-ninja'></i>Tour Guide</a>
+            <a class="text-white" href="{{route('packagelist')}}"><i class='fa fa-folder-open'></i>Packagelist</a>
+            <a class="text-white" href="{{route('master')}}"> <i class="fas fa-address-book"></i> Booking Details</a>
+            <a class="text-white"  href="{{route('gallery')}}"><i class='fa fa-home'></i>Gallery</a>
+            <a class="text-white"  href=" {{route('transport')}} "><i class='fa fa-bus'></i>Transport</a>
+            <a class="text-white"  href="{{route('hotel')}}"><i class='fa fa-hotel'></i>Hotel</a>
+            
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-            <!-- Nav Item - Pages Collapse Menu -->
-            <!-- <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-home"></i>
-                    <span>Home Page</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h5 class="collapse-header">Login Screens:</h5>
-                        
-                    </div>
-                </div>
-            </li> -->
+            
 
-            <a class="text-white"  href="register.html">Register</a>
-            <a class="text-white"  href="login.html">Login</a>
-            <a class="text-white"  href="forgot-password.html">Forgot Password</a>
-            <a class="text-white"  href="{{route('place')}}">Place</a>
-            <a class="text-white"  href=" {{route('transport')}} ">Transport</a>
-            <a class="text-white"  href="{{route('hotel')}}">Hotel</a>
-            <a class="text-white" href="{{route('tourguide')}}">Tour Guide</a>
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+            <a class="text-white"  href="register.html"><i class='fa fa-registered'></i>Register</a>
+            <a class="text-white"  href="login.html"><i class='fa fa-key'></i>Login</a>
+            <a class="text-white"  href="forgot-password.html"><i class='fa fa-unlock-alt'></i>Forgot Password</a>
+            
 
             
 

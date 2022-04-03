@@ -18,6 +18,7 @@ class CreateTransportsTable extends Migration
             $table ->string('transport_name');
             $table ->double('transport_price');
             $table ->string('transport_type');
+            $table->string('filebutton')->nullable();
             $table->timestamps();
         });
     }

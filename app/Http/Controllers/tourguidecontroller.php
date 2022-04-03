@@ -19,12 +19,49 @@ class tourguidecontroller extends Controller
     }
     public function store(Request $request)
     {
+        $filename = null;
+        if($request -> hasFile('filebutton')){
+            $file=$request->file('filebutton');
+            $filename = date('Ymdhsis').'.'.$file->getClientOriginalExtension();
+            $file->storeAs('/uploads/tourguide',$filename);
+        }
+
         tourguide::create([
             'tourguide_name'=>$request-> tourguide_name,
             'tourguide_phone'=>$request-> tourguide_phone,
             'tourguide_email'=>$request-> tourguide_email,
             'tourguide_address'=>$request-> tourguide_address,
+            'filebutton'=>$filename,
         ]);
-        return redirect()->back(); //
+        return redirect()->route('tourguide');
+}
+public function delete($id)
+{
+    $delete =tourguide::find($id);
+    $delete ->delete();
+    return redirect()->back();
+}
+// go to edit form
+public function edit($id){
+
+    $hoteledit = hotel::find($id);
+    return view('pages.tourguideedit', compact('tourguideedit'));
+
+
+}
+public function update(Request $request, $id){
+
+    $tourguideedit = tourguide::find($id);
+    $tourguideedit->update([
+
+        'tourguide_name'=>$request-> tourguide_name,
+        'tourguide_phone'=>$request-> tourguide_phone,
+        'tourguide_email'=>$request-> tourguide_email,
+        'tourguide_address'=>$request-> tourguide_address,
+
+    ]);
+    return redirect()->route('tourguide');
+
+
 }
 }

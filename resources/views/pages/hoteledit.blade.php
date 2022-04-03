@@ -1,7 +1,8 @@
 @extends('master')
 @section('content')
 
-<form action="{{route('hotel.store')}}" method="post" enctype="multipart/form-data">
+<form action="{{route('hotel.update', $hoteledit->id)}}  " method="post" enctype="multipart/form-data">
+    @method('PUT')
     @csrf
   <div class="form-group col-md-6">
     <label >Hotel Name</label>
@@ -17,7 +18,7 @@
     <input id="filebutton" name="filebutton" class="input-file" type="file">
   </div>
 </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">update</button>
 </form>
 
 @endsection

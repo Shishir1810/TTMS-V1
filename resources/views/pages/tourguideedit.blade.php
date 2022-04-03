@@ -1,7 +1,8 @@
 @extends('master')
 @section('content')
 
-<form action="{{route('tourguide.store')}}" method="post"enctype="multipart/form-data">
+<form action="{{route('tourguide.update',$tourguideedit->id)}}" method="POST"enctype="multipart/form-data">
+    @method('PUT')
     @csrf
   <div class="form-group col-md-6">
     <label >Name</label>
@@ -21,12 +22,6 @@
 </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-
-
-
-
-
-
 
 
 

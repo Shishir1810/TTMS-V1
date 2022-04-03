@@ -19,6 +19,7 @@ class CreateTourguidesTable extends Migration
             $table->double('tourguide_phone')->unique();
             $table->string('tourguide_email')->unique();
             $table->string('tourguide_address');
+            $table->string('filebutton')->nullable();
             $table->timestamps();
         });
     }

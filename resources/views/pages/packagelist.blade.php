@@ -2,18 +2,21 @@
 @section('content')
 
 <a href="{{route('packagelist.create')}}"  class="btn btn-primary my-4">Package create</a>
-<table class="table">
+<table class="table table-bordered">
   <thead>
     <tr>
     <th scope="col">id</th>
-      <th scope="col">name</th>
-      <th scope="col">place</th>
-      <th scope="col">hotel</th>
-      <th scope="col">transport</th>
-      <th scope="col">type</th>
-      <th scope="col">cost</th>
-      <th scope="col">person</th>
-      <th scope="col">date</th>
+      <th scope="col">Name</th>
+      <th scope="col">Place</th>
+      <th scope="col">Hotel</th>
+      <th scope="col">Transport</th>
+      <th scope="col">Type</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Person</th>
+      <th scope="col">Date</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+      <th scope="col">Booking</th>
     </tr>
   </thead>
   <tbody>
@@ -29,6 +32,9 @@
       <td>{{$data->packagelist_cost}}</td>
       <td>{{$data->packagelist_person}}</td>
       <td>{{$data->packagelist_date}}</td>
+      <td><a class="btn btn-primary" href="{{route('packagelist.edit', $data->id )}}">Edit</a></td>
+      <td><a class="btn btn-danger" href="{{route('packagelist.delete', $data->id)}}">Delete</a></td>
+      <td><a class="btn btn-success" href="">Booking</a></td>
     </tr>
     @endforeach
     

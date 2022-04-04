@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admincontroller;
 use App\Http\Controllers\hotelController;
+use App\Http\Controllers\placecontroller;
+use App\Http\Controllers\resortcontroller;
 use App\Http\Controllers\gallerycontroller;
 use App\Http\Controllers\touristcontroller;
 use App\Http\Controllers\tourguidecontroller;
@@ -91,3 +93,25 @@ Route::get('hotel/delete/{id}',[hotelcontroller::class,'delete'])->name('hotel.d
 // hoteledit route
 Route::get('hotel/edit/{id}',[hotelcontroller::class,'edit'])->name('hotel.edit');
 Route::put('hotel/update/{id}',[hotelcontroller::class,'update'])->name('hotel.update');
+
+// placeController route
+
+Route::get('place/view',[placecontroller::class, 'place'])->name('place');
+Route::get('place/create',[placecontroller::class, 'create'])->name('place.create');
+Route::post('place/store',[placecontroller::class, 'store'])->name('place.store');
+Route::get('place/delete/{id}',[placecontroller::class,'delete'])->name('place.delete');
+
+// placeedit route
+Route::get('place/edit/{id}',[placecontroller::class,'edit'])->name('place.edit');
+Route::put('place/update/{id}',[placecontroller::class,'update'])->name('place.update');
+
+// resortController route
+
+Route::get('resort/view',[resortcontroller::class, 'resort'])->name('resort');
+Route::get('resort/create',[resortcontroller::class, 'create'])->name('resort.create');
+Route::post('resort/store',[resortcontroller::class, 'store'])->name('resort.store');
+Route::get('resort/delete/{id}',[resortcontroller::class,'delete'])->name('resort.delete');
+
+// resortedit route
+Route::get('resort/edit/{id}',[resortcontroller::class,'edit'])->name('resort.edit');
+Route::put('resort/update/{id}',[resortcontroller::class,'update'])->name('resort.update');

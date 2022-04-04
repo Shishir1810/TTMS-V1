@@ -50,6 +50,12 @@ public function edit($id){
 
 }
 public function update(Request $request, $id){
+    $filename = null;
+        if($request -> hasFile('filebutton')){
+            $file=$request->file('filebutton');
+            $filename = date('Ymdhsis').'.'.$file->getClientOriginalExtension();
+            $file->storeAs('/uploads/admin',$filename);
+        }
 
     $adminedit = admin::find($id);
     $adminedit->update([
@@ -58,6 +64,7 @@ public function update(Request $request, $id){
         'admin_designation'=>$request-> admin_designation,
         'admin_phone'=>$request-> admin_phone,
         'admin_email'=>$request-> admin_email,
+        'filebutton'=>$filename,
         
 
     ]);

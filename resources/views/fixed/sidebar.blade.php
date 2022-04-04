@@ -16,9 +16,11 @@
             <a class="text-white" href="{{route('tourguide')}}"><i class='fas fa-user-ninja'></i>Tour Guide</a>
             <a class="text-white" href="{{route('packagelist')}}"><i class='fa fa-folder-open'></i>Packagelist</a>
             <a class="text-white" href="{{route('master')}}"> <i class="fas fa-address-book"></i> Booking Details</a>
-            <a class="text-white"  href="{{route('gallery')}}"><i class='fa fa-home'></i>Gallery</a>
-            <a class="text-white"  href=" {{route('transport')}} "><i class='fa fa-bus'></i>Transport</a>
-            <a class="text-white"  href="{{route('hotel')}}"><i class='fa fa-hotel'></i>Hotel</a>
+            <a class="text-white" href="{{route('gallery')}}"><i class='fa fa-home'></i>Gallery</a>
+            <a class="text-white" href="{{route('transport')}} "><i class='fa fa-bus'></i>Transport</a>
+            <a class="text-white" href="{{route('place')}}"><i class='fa fa-map-marker'></i>Place</a>
+            <a class="text-white" href="{{route('resort')}}"><i class='fa fa-hotel'></i>Resort</a>
+            <a class="text-white" href="{{route('hotel')}}"><i class='fa fa-hotel'></i>Hotel</a>
             
 
             <!-- Divider -->

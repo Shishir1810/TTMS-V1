@@ -1,7 +1,8 @@
 @extends('master')
 @section('content')
-
-<a href="{{route('tourist.create')}}"  class="btn btn-primary my-4">create tourist</a>
+<div class="col-md-12 bg-light text-right">
+<a href="{{route('tourist.create')}}"  class="btn btn-primary my-4">create tourist info</a>
+</div>
 <table class="table table-bordered">
   <thead>
     <tr>

@@ -1,7 +1,8 @@
 @extends('master')
 @section('content')
-
-<a href="{{route('packagelist.create')}}"  class="btn btn-primary my-4">Package create</a>
+<div class="col-md-12 bg-light text-right">
+<a href="{{route('packagelist.create')}}"  class="btn btn-primary my-4">Create Package info</a>
+</div>
 <table class="table table-bordered">
   <thead>
     <tr>

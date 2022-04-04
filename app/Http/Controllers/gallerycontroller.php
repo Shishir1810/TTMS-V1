@@ -47,12 +47,19 @@ public function edit($id){
 
 }
 public function update(Request $request, $id){
+    $filename = null;
+        if($request -> hasFile('filebutton')){
+            $file=$request->file('filebutton');
+            $filename = date('Ymdhsis').'.'.$file->getClientOriginalExtension();
+            $file->storeAs('/uploads/gallery',$filename);
+        }
 
     $galleryedit = gallery::find($id);
     $galleryedit->update([
 
         'gallery_name'=>$request-> gallery_name,
         'gallery_details'=>$request-> gallery_details,
+        'filebutton'=>$filename,
     ]);
     return redirect()->route('gallery');
 

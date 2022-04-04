@@ -30,6 +30,7 @@ class hotelcontroller extends Controller
             'hotel_name'=>$request-> hotel_name,
             'hotel_price'=>$request-> hotel_price,
             'hotel_type'=>$request-> hotel_type,
+            'hotel_type'=>$request-> hotel_location,
             'filebutton'=>$filename,
         ]);
         return redirect()->route('hotel');
@@ -50,6 +51,12 @@ class hotelcontroller extends Controller
 
         }
         public function update(Request $request, $id){
+            $filename = null;
+        if($request -> hasFile('filebutton')){
+            $file=$request->file('filebutton');
+            $filename = date('Ymdhsis').'.'.$file->getClientOriginalExtension();
+            $file->storeAs('/uploads/hotel',$filename);
+        }
 
             $hoteledit = hotel::find($id);
             $hoteledit->update([
@@ -57,6 +64,8 @@ class hotelcontroller extends Controller
             'hotel_name'=>$request-> hotel_name,
             'hotel_price'=>$request-> hotel_price,
             'hotel_type'=>$request-> hotel_type,
+            'hotel_type'=>$request-> hotel_location,
+            'filebutton'=>$filename,
 
             ]);
             return redirect()->route('hotel');

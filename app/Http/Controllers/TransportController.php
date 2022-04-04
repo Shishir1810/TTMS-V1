@@ -47,11 +47,18 @@ class TransportController extends Controller
         return view('pages.transportedit',compact('transportedit'));
     }
     public function update(Request $request, $id){
+        $filename = null;
+        if($request -> hasFile('filebutton')){
+            $file=$request->file('filebutton');
+            $filename = date('Ymdhsis').'.'.$file->getClientOriginalExtension();
+            $file->storeAs('/uploads/transport',$filename);
+        }
         $transportedit =Transport::find($id);
         $transportedit->update([
             'transport_name'=>$request-> transport_name,
             'transport_price'=>$request-> transport_price,
             'transport_type'=>$request-> transport_type,
+            'filebutton'=>$filename,
 
         ]);
         return redirect()->route('transport');

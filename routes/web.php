@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admincontroller;
 use App\Http\Controllers\hotelController;
 use App\Http\Controllers\placecontroller;
+use App\Http\Controllers\mastercontroller;
 use App\Http\Controllers\resortcontroller;
 use App\Http\Controllers\gallerycontroller;
 use App\Http\Controllers\touristcontroller;
@@ -20,8 +21,11 @@ use App\Http\Controllers\Packagelistcontroller;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/',function(){return view('frontend.Master');})->name('Master');
 
-Route::get('/', function () {
+
+
+Route::get('/admin', function () {
     return view('master');
 })->name('master');
 // packagelist route

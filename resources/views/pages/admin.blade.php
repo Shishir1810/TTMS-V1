@@ -11,6 +11,7 @@
       <th scope="col">Designation</th>
       <th scope="col">Phone</th>
       <th scope="col">Email</th>
+      <th scope="col">Password</th>
       <th scope="col">Image</th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
@@ -27,6 +28,7 @@
       <td>{{$data->admin_designation}}</td>
       <td>{{$data->admin_phone}}</td>
       <td>{{$data->admin_email}}</td>
+      <td>{{$data->admin_password}}</td>
       <td><img width="120px" src="{{url('/uploads/admin/'.$data->filebutton)}}" alt="">
         </td>
       <td><a class="btn btn-primary" href=" {{route('admin.edit', $data->id )}}  ">Edit</a></td>

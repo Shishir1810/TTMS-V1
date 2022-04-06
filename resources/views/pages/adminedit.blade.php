@@ -13,6 +13,8 @@
     <input type="text" class="form-control"  placeholder="Enter type" name="admin_phone">
     <label >Email</label>
     <input type="text" class="form-control"  placeholder="Enter type" name="admin_email">
+    <label >Password</label>
+    <input type="text" class="form-control"  placeholder="Enter password" name="admin_password">
   </div>
   <div class="form-group">
   <label class="col-md-4 control-label" for="filebutton">main_image</label>

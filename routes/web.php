@@ -10,6 +10,7 @@ use App\Http\Controllers\gallerycontroller;
 use App\Http\Controllers\touristcontroller;
 use App\Http\Controllers\tourguidecontroller;
 use App\Http\Controllers\TransportController;
+use App\Http\Controllers\superadmincontroller;
 use App\Http\Controllers\Packagelistcontroller;
 /*
 |--------------------------------------------------------------------------
@@ -21,13 +22,13 @@ use App\Http\Controllers\Packagelistcontroller;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// frontend route
 Route::get('/',function(){return view('frontend.Master');})->name('Master');
 
-
-
-Route::get('/admin', function () {
-    return view('master');
-})->name('master');
+Route::get('/admin',[admincontroller::class,'index'])->name('index');
+Route::get('/logout',[superadmincontroller::class,'logout'])->name('logout');
+Route::post('/admin.desboard',[admincontroller::class,'show_desboard'])->name('show_desboard');
+Route::get('/desboard',[superadmincontroller::class,'master'])->name('master');
 // packagelist route
 
 Route::get('packagelist/view',[Packagelistcontroller::class, 'packagelist'])->name('packagelist');

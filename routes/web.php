@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\homecontroller;
 use App\Http\Controllers\admincontroller;
 use App\Http\Controllers\hotelController;
 use App\Http\Controllers\placecontroller;
@@ -23,7 +24,8 @@ use App\Http\Controllers\Packagelistcontroller;
 |
 */
 // frontend route
-Route::get('/',function(){return view('frontend.Master');})->name('Master');
+Route::get('/',[homecontroller::class,'homemaster'])->name('homemaster');
+Route::post('/registration',[homecontroller::class,'registration'])->name('registration');
 
 Route::get('/admin',[admincontroller::class,'index'])->name('index');
 Route::get('/logout',[superadmincontroller::class,'logout'])->name('logout');
@@ -58,11 +60,9 @@ Route::get('admin/edit/{id}',[admincontroller::class,'edit'])->name('admin.edit'
 Route::put('admin//update/{id}',[admincontroller::class,'update'])->name('admin.update');
 //tourist controller
 Route::get('tourist/view',[touristcontroller::class,'tourist'])->name('tourist');
-Route::get('tourist/create',[touristcontroller::class,'create'])->name('tourist.create');
-Route::post('tourist/store',[touristcontroller::class,'store'])->name('tourist.store');
 Route::get('tourist/delete/{id}',[touristcontroller::class,'delete'])->name('tourist.delete');
-Route::get('tourist/edit/{id}',[touristcontroller::class,'edit'])->name('tourist.edit');
-Route::put('tourist//update/{id}',[touristcontroller::class,'update'])->name('tourist.update');
+
+
 
 
 // gallerycontroller route

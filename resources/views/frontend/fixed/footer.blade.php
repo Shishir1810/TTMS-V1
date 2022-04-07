@@ -4,7 +4,7 @@
           <div class="row row-bottom-padded-md">
             <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
               <h3>About Travel</h3>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <p>Traveling is not something you’re good at. It’s something you do, like breathing.</p>
             </div>
             <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
               <h3>Top Flights Routes</h3>

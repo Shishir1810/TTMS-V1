@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html class="no-js">
 <head>
-<title>Free CSS | Free CSS Templates | Demo of the HTML CSS Template Travel</title>
+<title>Tourism World</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,7 +43,7 @@
               <div class="col-sm-5 col-md-5">
                 <div class="tabulation animate-box">
                   <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#flights" aria-controls="flights" role="tab" data-toggle="tab">Flights</a></li>
+                    <li role="presentation" class="active"><a href="#flights" aria-controls="flights" role="tab" data-toggle="tab">Transport</a></li>
                     <li role="presentation"><a href="#hotels" aria-controls="hotels" role="tab" data-toggle="tab">Hotels</a></li>
                     <li role="presentation"><a href="#packages" aria-controls="packages" role="tab" data-toggle="tab">Packages</a></li>
                   </ul>
@@ -247,10 +247,10 @@
               </div>
               <div class="desc2 animate-box">
                 <div class="col-sm-7 col-sm-push-1 col-md-7 col-md-push-1">
-                  <p>Lorem ipsum dolor sit amet</p>
-                  <h2>Exclusive Limited Time Offer</h2>
-                  <h3>Fly to Hong Kong via Los Angeles, USA</h3>
-                  <span class="price">$599</span></div>
+                <p><h2>Take only memories</h2>
+                  <span><h3>leave only footprints</h3></span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>

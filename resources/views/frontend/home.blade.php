@@ -111,21 +111,20 @@
 </div>
 
 <div class="row">
-@foreach ($place as $place)
 <div class="col-lg-4 col-md-6">
 
 <div class="single_destination">
 <div class="thumb">
 
-<img src="/uploads/place/{{$place->filebutton}}" alt="">
+<img src="" alt="">
 </div>
 <div class="content">
-<p class="d-flex align-items-center">{{$place->place_name}} <a href=""> 07 Places</a> </p>
+<p class="d-flex align-items-center"> <a href=""> 07 Places</a> </p>
 </div>
 
 </div>
 </div>
-@endforeach
+
 </div>
 
 </div>

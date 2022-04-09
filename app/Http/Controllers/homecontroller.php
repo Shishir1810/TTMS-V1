@@ -11,9 +11,9 @@ class homecontroller extends Controller
 {
     public function homemaster()
     {
-    $place=place::all();
+    
 
-    return view('frontend.home',compact('place'));
+    return view('frontend.home');
     } 
     public function ghomemaster()
     {

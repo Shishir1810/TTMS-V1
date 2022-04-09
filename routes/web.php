@@ -25,6 +25,8 @@ use App\Http\Controllers\Packagelistcontroller;
 */
 // frontend route
 Route::get('/',[homecontroller::class,'homemaster'])->name('homemaster');
+// frontend route
+Route::get('/',[homecontroller::class,'ghomemaster'])->name('ghomemaster');
 Route::post('/registration',[homecontroller::class,'registration'])->name('registration');
 
 Route::get('/admin',[admincontroller::class,'index'])->name('index');

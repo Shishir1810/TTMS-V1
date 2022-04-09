@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 
 class gallerycontroller extends Controller
 {
+
+    
     public function gallery()
     {
         
